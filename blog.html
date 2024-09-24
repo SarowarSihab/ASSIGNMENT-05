@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Donate Bangladesh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
+    <style>
+        /* Add custom styles for the blurred navbar */
+        .navbar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <div class="navbar bg-base-100 shadow-lg px-20 fixed top-0 left-0 w-full z-10">
+        <div class="navbar-start">
+            <a style="background-color: greenyellow;border-color: white; color: black; font-weight: bolder;" id="navButton" href="blog.html" class="btn btn-primary">Blog</a>
+        </div>
+        <div class="navbar-center">
+            <img src="assets/logo.png" alt="Logo" class="w-10 sm:w-12"> 
+            <span class="text-lg font-semibold hidden sm:block">Donate Bangladesh</span>
+        </div>
+        <div class="navbar-end flex gap-2"> <img src="assets/coin.png" alt="" srcset="">
+            <div class="text-sm sm:text-base"> <span style="color: black;" id="balance" class="text-success">100000</span> BDT</div>
+        </div>
+    </div>
+
+    <div>
+        <div class="flex justify-center mt-16 gap-4">
+            <button  style="background-color:  greenyellow; color: black;font-weight: bolder; border-color: white;" id="donationBtn" class="btn btn-success" onclick="navigateToDonation()">Donation</button>
+            <button  style="background-color: white; color: black;font-weight: bolder; border-color: azure;" id="historyBtn" class="btn btn-primary" onclick="navigateToHistory()">History</button>
+        </div>
+    </div>
+
+    <div class="p-5 mt-16 max-w-screen-md mx-auto">
+        <h1 class="text-2xl font-bold mb-4 text-center">Blog</h1>
+
+
+
+        <div tabindex="0" class="collapse bg-base-200">
+            <div class="collapse-title text-xl font-medium">1. What is the Document Object Model (DOM)?</div>
+            <div class="collapse-content">
+              <p> <p class="text-gray-700">The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of objects, allowing programs to manipulate the document's content, structure, and style.</p></p>
+            </div>
+          </div>
+
+
+
+          <div tabindex="0" class="collapse bg-base-200">
+            <div class="collapse-title text-xl font-medium">2. How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+              <p> <p class="text-gray-700">You can select an element from the DOM using methods like <code>document.getElementById('id')</code>, <code>document.querySelector('.class')</code>, or <code>document.getElementsByTagName('tagName')</code>. These methods return the first matching element, or a collection of elements, allowing you to manipulate them further.</p></p>
+            </div>
+          </div>
+
+
+          
+          <div tabindex="0" class="collapse bg-base-200">
+            <div class="collapse-title text-xl font-medium">3. What is event delegation in the context of the DOM, and why is it useful?</div>
+            <div class="collapse-content">
+              <p>  <p class="text-gray-700">Event delegation is a technique that allows you to attach a single event listener to a parent element instead of attaching listeners to individual child elements. This is useful because it improves performance, especially when dealing with many child elements, and allows dynamically added elements to inherit the event listener without needing to add listeners to them separately.</p> </p>
+            </div>
+          </div>
+
+
+
+
+          
+          <div tabindex="0" class="collapse bg-base-200">
+            <div class="collapse-title text-xl font-medium">4. How do you manipulate an element's attributes and styles using the DOM?</div>
+            <div class="collapse-content">
+              <p>  <p class="text-gray-700">You can manipulate an element's attributes and styles using JavaScript. For attributes, you can use <code>element.setAttribute('attributeName', 'value')</code> or directly access attributes like <code>element.src</code>. For styles, you can use <code>element.style.propertyName = 'value'</code> to set CSS styles directly, or <code>element.classList.add('className')</code> to add a class for styling.</p></p>
+            </div>
+          </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+    <script>
+        // JavaScript to change the nav button based on the page
+        window.onload = function() {
+            const currentPage = window.location.pathname.split("/").pop();
+            const navButton = document.getElementById('navButton');
+
+            if (currentPage === "blog.html") {
+                navButton.innerText = "Home";
+                navButton.href = "index.html";
+            }
+        }
+    </script>
+</body>
+</html>
