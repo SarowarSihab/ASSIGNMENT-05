@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
     <style>
-        /* Add custom styles for the blurred navbar */
+        
         .navbar {
             backdrop-filter: blur(10px);
             background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
@@ -16,20 +16,20 @@
 </head>
 <body class="bg-gray-100">
 
-    <!-- Navbar -->
+    
     <div class="navbar bg-base-100 shadow-lg px-20 fixed top-0 left-0 w-full z-10">
         <div class="navbar-start">
             <a style="background-color: greenyellow;border-color: white; color: black; font-weight: bolder;" id="navButton" href="blog.html" class="btn btn-primary">Blog</a>
         </div>
         <div class="navbar-center">
-            <img src="assets/logo.png" alt="Logo" class="w-10 sm:w-12"> 
-            <span class="text-lg font-semibold hidden sm:block">Donate Bangladesh</span>
+            <img src="assets/logo.png" alt="Logo" class="w-8 sm:w-10"> 
+            <span style="font-weight: bolder;" class="text-sm sm:text-lg font-semibold hidden sm:block ml-2">Donate Bangladesh</span>
         </div>
         <div class="navbar-end flex gap-2"> <img src="assets/coin.png" alt="" srcset="">
             <div class="text-sm sm:text-base"> <span style="color: black;" id="balance" class="text-success">100000</span> BDT</div>
         </div>
     </div>
-
+<br>
     <div>
         <div class="flex justify-center mt-16 gap-4">
             <button  style="background-color:  greenyellow; color: black;font-weight: bolder; border-color: white;" id="donationBtn" class="btn btn-success" onclick="navigateToDonation()">Donation</button>
@@ -89,17 +89,6 @@
 
 
 
-    <script>
-        // JavaScript to change the nav button based on the page
-        window.onload = function() {
-            const currentPage = window.location.pathname.split("/").pop();
-            const navButton = document.getElementById('navButton');
-
-            if (currentPage === "blog.html") {
-                navButton.innerText = "Home";
-                navButton.href = "index.html";
-            }
-        }
-    </script>
+          <script src="blog.js"></script>
 </body>
 </html>

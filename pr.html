@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+    
+        .navbar {
+            backdrop-filter: blur(20px);
+            background-color: rgba(255, 255, 255, 0.8); 
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    
+    <div  class="navbar bg-base-100 shadow-lg px-20 fixed top-0 left-0 w-full z-10">
+        <div class="navbar-start">
+            <a style="color: black ; background-color: greenyellow; border-color: white;font-weight: bolder;" id="navButton" href="blog.html" class="btn btn-primary">Blog</a>
+        </div>
+        <div class="navbar-center">
+            <img  src="assets/logo.png" alt="Logo" class="w-10 sm:w-12">
+            <span style="color: black ; font-weight: bolder;" class="text-lg font-semibold hidden sm:block">Donate Bangladesh</span>
+        </div>
+        <div class="navbar-end flex gap-2"><img src="assets/coin.png" alt="" srcset="">
+            <div class="text-sm sm:text-base"><span style="color: black;" id="balance" class="text-success"><i class="fas fa-dollar-sign mr-1"></i>10000</span> BDT</div>
+        </div>
+    </div>
+
+    
+    <div class="flex justify-center mt-16 gap-4">
+        <button  style="background-color:  greenyellow; color: black;font-weight: bolder; border-color: white;" id="donationBtn" class="btn btn-success" onclick="navigateToDonation()">Donation</button>
+        <button  style="background-color: white; color: black;font-weight: bolder; border-color: azure;" id="historyBtn" class="btn btn-primary" onclick="navigateToHistory()">History</button>
+    </div>
+
+    
+    <div class="p-5 flex flex-col items-center" id="donationSection">
+        
+        <div class="card w-1/2 bg-base-100 shadow-lg mb-5 flex flex-row border border-gray-300">
+            <figure class="w-1/2">
+                <img src="assets/noakhali.png" alt="Flood Relief in Noakhali" class="object-cover w-full h-full">
+            </figure>
+            <div class="card-body w-2/3">
+                
+                <p><img src="assets/coin.png" alt="" sizes="" srcset=""><span  id="noakhaliDonation" class="font-semibold text-black-500" ><i class="fas fa-dollar-sign mr-1"></i>0</span> BDT</p>
+                <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
+                <p> The recent floods in Noakhali have caused significant damage to <br> homes  infrastructure. Your donation will help provide essential <br> supplies and  to those affected by this disaster. Every contribution, <br> big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                
+                <div class="flex gap-2">
+                    <input type="number" id="noakhaliInput" placeholder="Enter donation amount" class="input input-bordered w-full " /> 
+                    
+                </div>
+                <button  style="background-color:  greenyellow; color: black;font-weight: bolder; border-color: white;"  onclick="donate('noakhali', 0)" class="btn btn-primary">Donate Now</button>
+            </div>
+        </div>
+
+        
+        <div class="card w-1/2 bg-base-100 shadow-lg mb-5 flex flex-row border border-gray-300">
+            <figure class="w-1/2">
+                <img src="assets/feni.png" alt="Flood Relief in Feni" class="object-cover w-full h-full">
+            </figure>
+            <div class="card-body w-2/3">
+
+                <p><img src="assets/coin.png" alt="" sizes="" srcset=""> <span id="feniDonation" class="font-semibold text-black-500"><i class="fas fa-dollar-sign mr-1"></i>5000</span> BDT</p>
+                <h2 class="card-title">Donate for Flood Relief in Feni,Bangladesh</h2>
+                <p>The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+                
+                <div class="flex gap-2">
+                    <input type="number" id="feniInput" placeholder="Enter donation amount" class="input input-bordered w-full " />
+                    
+                </div>
+                <button style="background-color:  greenyellow; color: black;font-weight: bolder; border-color: white;" onclick="donate('feni', 6500)" class="btn btn-primary">Donate Now</button>
+            </div>
+        </div>
+
+        
+        <div class="card w-1/2 bg-base-100 shadow-lg flex flex-row border border-gray-300">
+            <figure class="w-1/2">
+                <img src="assets/quota-protest.png" alt="Aid for Injured in Quota Movement" class="object-cover w-full h-full">
+            </figure>
+            <div class="card-body w-2/3">
+
+                <div>
+                    <p><img src="assets/coin.png" alt="" srcset=""> <span id="quotaDonation" class="font-semibold text-black-500"><i class="fas fa-dollar-sign mr-1"></i>6500</span> BDT</p>
+
+                </div>
+                
+                <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
+                <p>The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                
+                <div class="flex gap-2">
+                    <input type="number" id="quotaInput" placeholder="Enter donation amount" class="input input-bordered w-full " />
+                    
+                </div>
+                <button style="background-color:  greenyellow; color: black;font-weight: bolder; border-color: white;" onclick="donate('quota', 15500)" class="btn btn-primary">Donate Now</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="p-5 hidden" id="historySection">
+        <h2 class="text-lg font-bold">Donation History</h2>
+        <ul class="list-disc pl-5" id="historyList">
+            <!-- Donation history will be populated here dynamically -->
+        </ul>
+    </div>
+
+    
+    <input type="checkbox" id="successModal" class="modal-toggle" />
+    <div class="modal">
+        <div class="modal-box">
+            <h2 class="font-bold text-xl">Congrates!</h2>
+            <img src="assets/coin.png" alt="Success Icon" class="w-16 h-16 mx-auto my-4">
+            <p class="py-4">You Have Donated Successfully for Humankind</p>
+            <h3 style="position: relative; font-size: x-large; font-weight: bolder;">successfully</h3>
+            <div class="modal-action">
+                <label for="successModal" class="btn">Close confirmation</label>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    
+</body>
+</html>
+<script>
+    // JavaScript to change the nav button based on the page
+    window.onload = function() {
+        const currentPage = window.location.pathname.split("/").pop();
+        const navButton = document.getElementById('navButton');
+
+        if (currentPage === "blog.html") {
+            navButton.innerText = "Home";
+            navButton.href = "index.html";
+        }
+    }
+</script>class="text-lg  hidden sm:block"
